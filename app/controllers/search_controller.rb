@@ -42,7 +42,7 @@ class SearchController < ApplicationController
         speed_key = ENV['SPEED_API_KEY']
         begin
           noko_start = Time.now
-          doc = Nokogiri::HTML(open(response["id"]))
+          doc = Nokogiri::HTML(open(http_url))
           @noko_time += (Time.now - noko_start)
           @api_count += 1
 
@@ -73,11 +73,12 @@ class SearchController < ApplicationController
             page_score = (25 *(response["ruleGroups"]["SPEED"]["score"]/100.0)) + (45 *(response["ruleGroups"]["USABILITY"]["score"]/100.0)) + seo_points
 
             @potential_clients << business if page_score < 79
-
+          else
+            @potential_clients << business
+          end
           rescue
             #add something here if we want
           end
-        end
       else
         @potential_clients << business
       end
