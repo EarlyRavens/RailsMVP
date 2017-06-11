@@ -19,6 +19,7 @@ class SearchController < ApplicationController
     yelp_start_time = Time.now
 
     @yelp_businesses = HTTParty.get("https://api.yelp.com/v3/businesses/search?location=#{@location}&term=#{@search}", headers: {"Authorization" => "Bearer #{yelp_key}"})['businesses'][0..10]
+
     @api_count = 1
     @yelp_api_time += (Time.now - yelp_start_time)
 
