@@ -377,3 +377,18 @@ Processing by SearchController#query as HTML
 Completed 200 OK in 100853ms (Views: 20.3ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-11 15:04:51 -0700
+Processing by SearchController#index as HTML
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (292.8ms)
+Completed 200 OK in 693ms (Views: 327.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=michael+mina&location=94105" for 127.0.0.1 at 2017-06-11 15:05:01 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"michael mina", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 69766ms (Views: 21.2ms)
+
+
