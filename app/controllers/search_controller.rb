@@ -41,16 +41,9 @@ class SearchController < ApplicationController
         http_url = 'http://' + client_page
         speed_key = ENV['SPEED_API_KEY']
         begin
-          google_start = Time.now
-          response = HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{http_url}&strategy=mobile&key=#{speed_key}")
-
-          @google_api_time += (Time.now - google_start)
-          @api_count += 1
-
           noko_start = Time.now
           doc = Nokogiri::HTML(open(response["id"]))
           @noko_time += (Time.now - noko_start)
-
           @api_count += 1
 
           has_title = doc.css('title').length > 0
@@ -70,12 +63,20 @@ class SearchController < ApplicationController
 
           seo_points = title_points + meta_points + heading_points
 
-          page_score = (25 *(response["ruleGroups"]["SPEED"]["score"]/100.0)) + (45 *(response["ruleGroups"]["USABILITY"]["score"]/100.0)) + seo_points
+          if seo_points > 10
+            google_start = Time.now
+            response = HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{http_url}&strategy=mobile&key=#{speed_key}")
 
-          @potential_clients << business if page_score < 79
+            @google_api_time += (Time.now - google_start)
+            @api_count += 1
 
-        rescue
-          #add something here if we want
+            page_score = (25 *(response["ruleGroups"]["SPEED"]["score"]/100.0)) + (45 *(response["ruleGroups"]["USABILITY"]["score"]/100.0)) + seo_points
+
+            @potential_clients << business if page_score < 79
+
+          rescue
+            #add something here if we want
+          end
         end
       else
         @potential_clients << business

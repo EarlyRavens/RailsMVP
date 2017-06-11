@@ -151,3 +151,24 @@ Completed 200 OK in 79498ms (Views: 40.0ms)
 Completed 200 OK in 99687ms (Views: 19.5ms)
 
 
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-10 21:06:34 -0700
+  
+SyntaxError (/Users/apprentice/Desktop/patrick/test/RailsMVP/app/controllers/search_controller.rb:77: syntax error, unexpected keyword_rescue, expecting keyword_end
+/Users/apprentice/Desktop/patrick/test/RailsMVP/app/controllers/search_controller.rb:93: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/search_controller.rb:77: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/controllers/search_controller.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/query?utf8=%E2%9C%93&business=ramen&location=94105" for 127.0.0.1 at 2017-06-10 21:06:35 -0700
+  
+SyntaxError (/Users/apprentice/Desktop/patrick/test/RailsMVP/app/controllers/search_controller.rb:77: syntax error, unexpected keyword_rescue, expecting keyword_end
+/Users/apprentice/Desktop/patrick/test/RailsMVP/app/controllers/search_controller.rb:93: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/search_controller.rb:77: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/controllers/search_controller.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
+Started GET "/" for 127.0.0.1 at 2017-06-10 21:06:43 -0700
+  
+SyntaxError (/Users/apprentice/Desktop/patrick/test/RailsMVP/app/controllers/search_controller.rb:77: syntax error, unexpected keyword_rescue, expecting keyword_end
+/Users/apprentice/Desktop/patrick/test/RailsMVP/app/controllers/search_controller.rb:93: syntax error, unexpected end-of-input, expecting keyword_end):
+  
+app/controllers/search_controller.rb:77: syntax error, unexpected keyword_rescue, expecting keyword_end
+app/controllers/search_controller.rb:93: syntax error, unexpected end-of-input, expecting keyword_end
