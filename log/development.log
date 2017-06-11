@@ -392,3 +392,74 @@ Processing by SearchController#query as HTML
 Completed 200 OK in 69766ms (Views: 21.2ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-11 15:33:18 -0700
+Processing by SearchController#index as HTML
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (270.8ms)
+Completed 200 OK in 644ms (Views: 324.2ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 15:33:22 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (14.1ms)
+Completed 200 OK in 1386ms (Views: 155.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 15:36:57 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 14975ms (Views: 46.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 15:38:33 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 63908ms (Views: 25.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 15:43:14 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 14434ms (Views: 19.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=michael+mina&location=94105" for 127.0.0.1 at 2017-06-11 15:49:04 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"michael mina", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 15115ms (Views: 22.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=ramen&location=94105" for 127.0.0.1 at 2017-06-11 15:50:14 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"ramen", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 16711ms (Views: 36.9ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=burgers&location=94105" for 127.0.0.1 at 2017-06-11 15:52:10 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"burgers", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12787ms (Views: 22.8ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=ice+crea&location=94105" for 127.0.0.1 at 2017-06-11 15:52:57 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"ice crea", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 21370ms (Views: 20.6ms)
+
+
