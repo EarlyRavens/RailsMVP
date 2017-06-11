@@ -1,0 +1,7 @@
+Started GET "/" for 127.0.0.1 at 2017-06-10 20:19:37 -0700
+Processing by SearchController#index as HTML
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (476.3ms)
+Completed 200 OK in 973ms (Views: 537.5ms)
+
+
