@@ -5,3 +5,30 @@ Processing by SearchController#index as HTML
 Completed 200 OK in 973ms (Views: 537.5ms)
 
 
+Started GET "/" for 127.0.0.1 at 2017-06-10 20:31:06 -0700
+Processing by SearchController#index as HTML
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (235.8ms)
+Completed 200 OK in 514ms (Views: 276.8ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=michael+mina&location=94105" for 127.0.0.1 at 2017-06-10 20:31:13 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"michael mina", "location"=>"94105"}
+Completed 500 Internal Server Error in 462ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/search_controller.rb:21:in `query'
+Started GET "/query?utf8=%E2%9C%93&business=michael+mina&location=94105" for 127.0.0.1 at 2017-06-10 20:32:47 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"michael mina", "location"=>"94105"}
+Completed 500 Internal Server Error in 699ms
+
+
+  
+NoMethodError (undefined method `[]' for nil:NilClass):
+  
+app/controllers/search_controller.rb:21:in `query'
