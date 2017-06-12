@@ -1007,3 +1007,16 @@ Completed 200 OK in 19822ms (Views: 32.9ms)
 Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 20:47:04 -0700
 Processing by SearchController#query as HTML
   Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.4ms)
+Completed 200 OK in 16059ms (Views: 36.8ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 20:58:22 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 16192ms (Views: 20.3ms)
+
+

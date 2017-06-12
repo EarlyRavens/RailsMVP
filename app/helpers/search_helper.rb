@@ -17,9 +17,7 @@ module SearchHelper
           title_points = has_title ? 15 : 0
           # The business gets 15 points if it has a title
 
-          false_meta1 = doc.css("meta[charset = 'UTF-8']") ? 1 : 0
-          false_meta2 = doc.css("meta[name = 'viewport']") ? 1 : 0
-          meta_count = doc.css('meta').count - (false_meta1 + false_meta2)
+          meta_count = doc.css('meta').count - false_metas_count(doc)
           meta_points = meta_count > 0 ? 15: 0
           # The business gets 15 points if it has metatag, we removed any meta tags that are standard (charset = 'UTF-8', name = 'viewport')
 
@@ -64,6 +62,27 @@ module SearchHelper
 
   def timeout_scrape_client_page(long_url)
     Timeout::timeout(5) { Nokogiri::HTML(open(long_url))}
+  end
+
+  def calculate_seo_point(client_page_dom)
+    title_points = client_page_dom.css('title').length > 0 ? 15 : 0
+    # The business gets 15 points if it has a title
+    false_metas = client_page_dom.css("meta[charset = 'UTF-8']","meta[charset = 'utf-8']","meta[name = 'viewport']")
+    false_meta1 = client_page_dom.css("meta[charset = 'UTF-8']") ? 1 : 0
+    false_meta2 = client_page_dom.css("meta[name = 'viewport']") ? 1 : 0
+    meta_count = client_page_dom.css('meta').count - (false_meta1 + false_meta2)
+    meta_points = meta_count > 0 ? 15: 0
+    # The business gets 15 points if it has metatag, we removed any meta tags that are standard (charset = 'UTF-8', name = 'viewport')
+
+    heading_count = client_page_dom.css('h1', 'h2', 'h3').count
+    heading_points = heading_count > 0 ? 5: 0
+    # If the business site has any headings, it gets 5 points
+
+    seo_points = title_points + meta_points + heading_points
+  end
+
+  def false_metas_count(dom)
+    return dom.css("meta[charset = 'UTF-8']","meta[charset = 'utf-8']","meta[name = 'viewport']").count
   end
 
   def add_potential_client(client)
