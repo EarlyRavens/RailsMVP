@@ -59,7 +59,7 @@ module SearchHelper
   end
 
   def calculate_page_score(google_response, points_from_seo)
-    speed_score = 25 * (google_response["ruleGroups"]["SPEED"]["score"]/100.0)
+    speed_score = 25* (google_response["ruleGroups"]["SPEED"]["score"]/100.0)
     usability_score = 45 *(google_response["ruleGroups"]["USABILITY"]["score"]/100.0)
 
     return speed_score + usability_score + points_from_seo
