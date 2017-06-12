@@ -8,7 +8,7 @@ class SearchController < ApplicationController
   def query
     @potential_clients = []
 
-    @yelp_businesses = HTTParty.get("https://api.yelp.com/v3/businesses/search?location=#{params[:location]}&term=#{params[:business]}", headers: {"Authorization" => "Bearer #{ENV['YELP_API_KEY']}"})['businesses']
+    @yelp_businesses = query_yelp_api(params)
 
     @mechanize = Mechanize.new
 
