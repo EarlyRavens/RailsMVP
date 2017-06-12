@@ -16,6 +16,7 @@ class SearchController < ApplicationController
     @yelp_business_threads.each {|thread| thread.join}
 
     @no_results = "No potential clients found that match your search request." if @potential_clients.empty?
+
     render 'search/index'
   end
 end
