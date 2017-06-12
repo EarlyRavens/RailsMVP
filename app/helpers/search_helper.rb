@@ -32,22 +32,48 @@ module SearchHelper
 
           seo_points = title_points + meta_points + heading_points
 
-          if seo_points > 10
+          if seo_score_filter(seo_points)
           # If the business gotten at least 10 seo points the business automatically has a shitty website since you need at least 79 points to pass test
 
-            response = Timeout::timeout(12) { HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{http_url}&strategy=mobile&key=#{speed_key}") }
+            response = query_google_api(http_url)
+            page_score = calculate_page_score(response,seo_points)
+            add_potential_client(business) if failed_test(page_score)
 
-            page_score = (25 *(response["ruleGroups"]["SPEED"]["score"]/100.0)) + (45 *(response["ruleGroups"]["USABILITY"]["score"]/100.0)) + seo_points
-
-            @potential_clients << business if page_score < 79
           else
-            @potential_clients << business
+
+            add_potential_client(business)
+
           end
           rescue
-            #add something here if we want
+            p "Business skipped."
           end
       else
-        @potential_clients << business
+        add_potential_client(business)
       end
+  end
+
+  private
+
+  def add_potential_client(client)
+    @potential_clients << client
+  end
+
+  def calculate_page_score(google_response, points_from_seo)
+    speed_score = 25 * (google_response["ruleGroups"]["SPEED"]["score"]/100.0)
+    usability_score = 45 *(google_response["ruleGroups"]["USABILITY"]["score"]/100.0)
+
+    return speed_score + usability_score + points_from_seo
+  end
+
+  def failed_test(score)
+    return score < 79
+  end
+
+  def query_google_api(url)
+    Timeout::timeout(12) { HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}") }
+  end
+
+  def seo_score_filter(score)
+    return score > 14
   end
 end
