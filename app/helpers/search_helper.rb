@@ -5,9 +5,9 @@ module SearchHelper
   end
 
   def threadTest(business)
-      business_page = get_business_page(business)
+      business_page_dom = get_page_dom(business)
 
-      if business_page.css('.biz-website a').last
+      if business_url(business_page_dom)
         client_page = business_page.css('.biz-website a').last.text
         http_url = 'http://' + client_page
         speed_key = ENV['SPEED_API_KEY']
@@ -71,7 +71,11 @@ module SearchHelper
     return score > 14
   end
 
-  def get_business_page(business)
+  def get_page_dom(business)
     @mechanize.get(business['url'])
+  end
+
+  def business_url(dom)
+    return dom.css('.biz-website a').last
   end
 end
