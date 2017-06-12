@@ -946,3 +946,23 @@ Processing by SearchController#query as HTML
 Completed 200 OK in 17772ms (Views: 42.2ms)
 
 
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 20:00:36 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+Completed 500 Internal Server Error in 4535ms
+
+
+  
+NameError (undefined local variable or method `business_page' for #<SearchController:0x007f88baae08b8>
+Did you mean?  business):
+  
+app/helpers/search_helper.rb:10:in `threadTest'
+app/controllers/search_controller.rb:15:in `block (2 levels) in query'
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 20:00:53 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16174ms (Views: 23.3ms)
+
+

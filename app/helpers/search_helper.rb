@@ -5,8 +5,7 @@ module SearchHelper
   end
 
   def threadTest(business)
-      yelp_url = business['url']
-      business_page = @mechanize.get(yelp_url)
+      business_page = get_business_page(business)
 
       if business_page.css('.biz-website a').last
         client_page = business_page.css('.biz-website a').last.text
@@ -33,16 +32,11 @@ module SearchHelper
           seo_points = title_points + meta_points + heading_points
 
           if seo_score_filter(seo_points)
-          # If the business gotten at least 10 seo points the business automatically has a shitty website since you need at least 79 points to pass test
-
             response = query_google_api(http_url)
             page_score = calculate_page_score(response,seo_points)
             add_potential_client(business) if failed_test(page_score)
-
           else
-
             add_potential_client(business)
-
           end
           rescue
             p "Business skipped."
@@ -75,5 +69,9 @@ module SearchHelper
 
   def seo_score_filter(score)
     return score > 14
+  end
+
+  def get_business_page(business)
+    @mechanize.get(business['url'])
   end
 end
