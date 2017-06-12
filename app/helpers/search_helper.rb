@@ -10,7 +10,7 @@ module SearchHelper
       if has_a_url?(business_page_dom)
         http_url = client_page(business_page_dom)
         begin
-          doc = Timeout::timeout(5) { Nokogiri::HTML(open(http_url))}
+          doc = timeout_scrape_client_page(http_url)
           # if URL redirects to https -> Nokogiri skips to rescue
 
           has_title = doc.css('title').length > 0
@@ -60,6 +60,10 @@ module SearchHelper
 
   def client_page(dom)
     return "http://#{business_url(dom).text}"
+  end
+
+  def timeout_scrape_client_page(long_url)
+    Timeout::timeout(5) { Nokogiri::HTML(open(long_url))}
   end
 
   def add_potential_client(client)

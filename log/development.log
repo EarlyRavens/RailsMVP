@@ -1004,3 +1004,6 @@ Processing by SearchController#query as HTML
 Completed 200 OK in 19822ms (Views: 32.9ms)
 
 
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 20:47:04 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
