@@ -8,9 +8,7 @@ module SearchHelper
       business_page_dom = get_page_dom(business)
 
       if business_url(business_page_dom)
-        client_page = business_page.css('.biz-website a').last.text
-        http_url = 'http://' + client_page
-        speed_key = ENV['SPEED_API_KEY']
+        http_url = client_page(business_url(business_page_dom))
         begin
           doc = Timeout::timeout(5) { Nokogiri::HTML(open(http_url)) }
           # if URL redirects to https -> Nokogiri skips to rescue
@@ -77,5 +75,9 @@ module SearchHelper
 
   def business_url(dom)
     return dom.css('.biz-website a').last
+  end
+
+  def client_page(dom)
+    return "http://#{dom.text}"
   end
 end
