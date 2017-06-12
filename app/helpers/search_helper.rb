@@ -13,19 +13,7 @@ module SearchHelper
           doc = timeout_scrape_client_page(http_url)
           # if URL redirects to https -> Nokogiri skips to rescue
 
-          has_title = doc.css('title').length > 0
-          title_points = has_title ? 15 : 0
-          # The business gets 15 points if it has a title
-
-          meta_count = doc.css('meta').count - false_metas_count(doc)
-          meta_points = meta_count > 0 ? 15: 0
-          # The business gets 15 points if it has metatag, we removed any meta tags that are standard (charset = 'UTF-8', name = 'viewport')
-
-          heading_count = doc.css('h1', 'h2', 'h3').count
-          heading_points = heading_count > 0 ? 5: 0
-          # If the business site has any headings, it gets 5 points
-
-          seo_points = title_points + meta_points + heading_points
+          seo_points = calculate_seo_points(doc)
 
           if seo_score_filter(seo_points)
             response = query_google_api(http_url)
@@ -64,26 +52,36 @@ module SearchHelper
     Timeout::timeout(5) { Nokogiri::HTML(open(long_url))}
   end
 
-  def calculate_seo_point(client_page_dom)
-    title_points = client_page_dom.css('title').length > 0 ? 15 : 0
-    # The business gets 15 points if it has a title
-    false_metas = client_page_dom.css("meta[charset = 'UTF-8']","meta[charset = 'utf-8']","meta[name = 'viewport']")
-    false_meta1 = client_page_dom.css("meta[charset = 'UTF-8']") ? 1 : 0
-    false_meta2 = client_page_dom.css("meta[name = 'viewport']") ? 1 : 0
-    meta_count = client_page_dom.css('meta').count - (false_meta1 + false_meta2)
-    meta_points = meta_count > 0 ? 15: 0
-    # The business gets 15 points if it has metatag, we removed any meta tags that are standard (charset = 'UTF-8', name = 'viewport')
+  def calculate_seo_points(client_page_dom)
+    title_points = has_title?(client_page_dom) ? 15 : 0
+    meta_points = meta_score(client_page_dom) > 0 ? 15: 0
+    heading_points = heading_count(client_page_dom) > 0 ? 5: 0
 
-    heading_count = client_page_dom.css('h1', 'h2', 'h3').count
-    heading_points = heading_count > 0 ? 5: 0
-    # If the business site has any headings, it gets 5 points
+    return title_points + meta_points + heading_points
+  end
 
-    seo_points = title_points + meta_points + heading_points
+  def has_title?(dom)
+    return dom.css('title').length > 0
   end
 
   def false_metas_count(dom)
     return dom.css("meta[charset = 'UTF-8']","meta[charset = 'utf-8']","meta[name = 'viewport']").count
   end
+
+  def all_metas_count(dom)
+    return dom.css('meta').count
+  end
+
+  def meta_score(dom)
+    return all_metas_count(dom) - false_metas_count(dom)
+  end
+
+  def headings_count(dom)
+    return dom.css('h1', 'h2', 'h3').count
+  end
+
+
+
 
   def add_potential_client(client)
     @potential_clients << client
