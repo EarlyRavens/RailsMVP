@@ -7,10 +7,10 @@ module SearchHelper
   def threadTest(business)
       business_page_dom = get_page_dom(business)
 
-      if business_url(business_page_dom)
+      if has_a_url?(business_page_dom)
         http_url = client_page(business_url(business_page_dom))
         begin
-          doc = Timeout::timeout(5) { Nokogiri::HTML(open(http_url)) }
+          doc = Timeout::timeout(5) { Nokogiri::HTML(open(http_url))}
           # if URL redirects to https -> Nokogiri skips to rescue
 
           has_title = doc.css('title').length > 0
@@ -74,6 +74,10 @@ module SearchHelper
   end
 
   def business_url(dom)
+    return dom.css('.biz-website a').last
+  end
+
+  def has_a_url?(dom)
     return dom.css('.biz-website a').last
   end
 
