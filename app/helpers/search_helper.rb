@@ -70,7 +70,7 @@ module SearchHelper
   end
 
   def query_google_api(url)
-    Timeout::timeout(12) { HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}") }
+    Timeout::timeout(12) { HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}")}
   end
 
   def seo_score_filter(score)
