@@ -5,26 +5,30 @@ module SearchHelper
   end
 
   def threadTest(business)
+
+
       business_page_dom = get_page_dom(business)
 
       if has_a_url?(business_page_dom)
         http_url = client_page(business_page_dom)
+
         begin
           doc = timeout_scrape_client_page(http_url)
-          # if URL redirects to https -> Nokogiri skips to rescue
 
           seo_points = calculate_seo_points(doc)
 
           if seo_score_filter(seo_points)
             response = query_google_api(http_url)
-            page_score = calculate_page_score(response,seo_points)
+            page_score = calculate_page_score(response, seo_points)
             add_potential_client(business) if failed_test(page_score)
           else
             add_potential_client(business)
           end
-          rescue
-            p "Business skipped."
-          end
+
+        rescue
+          "Business skipped."
+        end
+
       else
         add_potential_client(business)
       end
@@ -61,7 +65,7 @@ module SearchHelper
   end
 
   def has_title?(dom)
-    return dom.css('title').length > 0
+    return !dom.css('title').empty?
   end
 
   def false_metas_count(dom)
@@ -80,11 +84,12 @@ module SearchHelper
     return dom.css('h1', 'h2', 'h3').count
   end
 
+  def seo_score_filter(score)
+    return score > 14
+  end
 
-
-
-  def add_potential_client(client)
-    @potential_clients << client
+  def query_google_api(url)
+    Timeout::timeout(12) {HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}")}
   end
 
   def calculate_page_score(google_response, points_from_seo)
@@ -94,24 +99,12 @@ module SearchHelper
     return speed_score + usability_score + points_from_seo
   end
 
+  def add_potential_client(client)
+    @potential_clients << client
+  end
+
   def failed_test(score)
     return score < 79
-  end
-
-  def query_google_api(url)
-    Timeout::timeout(12) {HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}")}
-  end
-
-  def seo_score_filter(score)
-    return score > 14
-  end
-
-
-
-
-
-  def grab_url(dom)
-
   end
 
 end
