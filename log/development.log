@@ -1036,3 +1036,86 @@ Processing by SearchController#query as HTML
 Completed 200 OK in 10698ms (Views: 35.9ms)
 
 
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 21:22:05 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7454ms (Views: 21.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 21:24:07 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 8010ms (Views: 23.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 21:24:20 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 6763ms (Views: 18.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body&location=94105" for 127.0.0.1 at 2017-06-11 21:25:10 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 6733ms (Views: 43.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=michael+mina&location=94105" for 127.0.0.1 at 2017-06-11 21:25:42 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"michael mina", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (3.6ms)
+Completed 200 OK in 8149ms (Views: 18.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 21:26:00 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (3.7ms)
+Completed 200 OK in 7431ms (Views: 17.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=burgers&location=94105" for 127.0.0.1 at 2017-06-11 21:26:12 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"burgers", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 8034ms (Views: 21.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=koalas&location=94105" for 127.0.0.1 at 2017-06-11 21:27:10 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"koalas", "location"=>"94105"}
+Completed 500 Internal Server Error in 1281ms
+
+
+  
+NameError (undefined local variable or method `client_page_time_limit' for #<SearchController:0x007f88b2e1b580>):
+  
+app/helpers/search_helper.rb:23:in `threadTest'
+app/controllers/search_controller.rb:15:in `block (2 levels) in query'
+Started GET "/query?utf8=%E2%9C%93&business=burgers&location=94105" for 127.0.0.1 at 2017-06-11 21:30:20 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"burgers", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 6950ms (Views: 22.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 21:30:39 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.6ms)
+Completed 200 OK in 8846ms (Views: 40.5ms)
+
+
