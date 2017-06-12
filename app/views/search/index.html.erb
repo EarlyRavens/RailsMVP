@@ -1,12 +1,5 @@
 <div style="text-align: center; list-style: none;">
 <h1 class="title">Early Bird</h1>
-<% if @api_count %>
-  <h1 class="title"><%= @api_count %> API calls made in <%= @time_elapsed %> seconds.</h1>
-  <h1 class="title">Mechanize Time: <%= @mech_time %> seconds</h1>
-  <h1 class="title">Yelp Time: <%= @yelp_api_time %> seconds</h1>
-  <h1 class="title">Google Time: <%= @google_api_time %> seconds</h1>
-  <h1 class="title">Nokogiri Time: <%= @noko_time %> seconds</h1>
-<% end %>
 <div class="stuff">
 <%= form_tag(query_path, :method => "get", :class => "search_form") do %>
     <label> Business: </label>
@@ -50,6 +43,6 @@
 
 <div id="slideshow">
 <%= image_tag("macbook") %>
-<%= image_tag("code") %>
-<%= image_tag("lee") %>
+<%= image_tag("macbook") %>
+<%= image_tag("macbook") %>
 </div>

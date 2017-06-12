@@ -26,16 +26,15 @@ module SearchHelper
     if has_a_url?(business_page_dom)
       http_url = client_page(business_page_dom)
       begin
-        doc = timeout_scrape_client_page(http_url)
+        doc = "PENDING: SCRAPE"
+        response = "PENDING: API CALL"
+        scrape_thread = Thread.new{timeout_scrape_client_page(http_url)}
+        google_thread = Thread.new{timeout_query_google_api(http_url)}
+        scrape_thread.join
+        google_thread.join
         seo_points = calculate_seo_points(doc)
-        if seo_score_filter(seo_points)
-          response = timeout_query_google_api(http_url)
-          page_score = calculate_page_score(response, seo_points)
-          add_potential_client(business) if failed_test(page_score)
-        else
-          add_potential_client(business)
-        end
-
+        page_score = calculate_page_score(response, seo_points)
+        add_potential_client(business) if failed_test(page_score)
       rescue
         "Business skipped."
       end
@@ -64,7 +63,7 @@ module SearchHelper
   end
 
   def timeout_scrape_client_page(long_url)
-    Timeout::timeout(CLIENT_PAGE_TIME_LIMIT) { Nokogiri::HTML(open(long_url))}
+    doc = Timeout::timeout(CLIENT_PAGE_TIME_LIMIT) { Nokogiri::HTML(open(long_url))}
   end
 
   def calculate_seo_points(client_page_dom)
@@ -100,7 +99,7 @@ module SearchHelper
   end
 
   def timeout_query_google_api(url)
-    Timeout::timeout(GOOGLE_API_TIME_LIMIT) {HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}")}
+    response = Timeout::timeout(GOOGLE_API_TIME_LIMIT) {HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}")}
   end
 
   def calculate_page_score(google_response, points_from_seo)
