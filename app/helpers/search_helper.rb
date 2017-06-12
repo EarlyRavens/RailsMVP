@@ -7,11 +7,11 @@ module SearchHelper
   GOOGLE_API_TIME_LIMIT = 12
   MAXIMUM_SPEED_SCORE = 25
   MAXIMUM_USABILITY_SCORE = 45
-  MAX_GOOGLE_SCORE = 100.0
+  MAXIMUM_GOOGLE_SCORE = 100.0
   MINIMUM_SUCCESS_BENCHMARK = 79
 
   def random
-    quotes = ["The early bird gets the worm! - Mina", "There is an art to the process of problem solving - Mike Tarkington", "Efficiency Focused - it's always important to work smart in addition to working hard - Mike Tarkington", "Creative Solutions - even the most difficult challenges can be overcome with creativity and cleverness - Mike Tarkington", "You miss all the shots you don't take - Wayne Gretzky - Jesse Calton"]
+    quotes = ["The early bird gets the worm! - Mina", "There is an art to the process of problem solving - Mike Tarkington", "Efficiency Focused - it's always important to work smart in addition to working hard - Mike Tarkington", "Creative Solutions - even the most difficult challenges can be overcome with creativity and cleverness - Mike Tarkington", "You miss all the shots you don't take - Wayne Gretzky - Michael Scott", "Fart - Omar Cameron", "They Don't Think It Be Like It Is But It Do - Max Peiros", "Has Anyone Really Been Far Even as Decided to Use Even Go Want to do Look More Like? - Patrick Tangphao", "Fuck Elixir - Earl Sabal"]
     return quotes.sample
   end
 
@@ -20,18 +20,16 @@ module SearchHelper
   end
 
   def evaluate(business)
+
     business_page_dom = get_page_dom(business)
 
     if has_a_url?(business_page_dom)
       http_url = client_page(business_page_dom)
-
       begin
         doc = timeout_scrape_client_page(http_url)
-
         seo_points = calculate_seo_points(doc)
-
         if seo_score_filter(seo_points)
-          response = query_google_api(http_url)
+          response = timeout_query_google_api(http_url)
           page_score = calculate_page_score(response, seo_points)
           add_potential_client(business) if failed_test(page_score)
         else
@@ -66,13 +64,13 @@ module SearchHelper
   end
 
   def timeout_scrape_client_page(long_url)
-    Timeout::timeout(client_page_time_limit) { Nokogiri::HTML(open(long_url))}
+    Timeout::timeout(CLIENT_PAGE_TIME_LIMIT) { Nokogiri::HTML(open(long_url))}
   end
 
   def calculate_seo_points(client_page_dom)
-    title_points = has_title?(client_page_dom) ? maximum_title_score : 0
-    meta_points = meta_score(client_page_dom) > 0 ? maximum_meta_score : 0
-    heading_points = heading_count(client_page_dom) > 0 ? maximum_heading_score : 0
+    title_points = has_title?(client_page_dom) ? MAXIMUM_TITLE_SCORE : 0
+    meta_points = meta_score(client_page_dom) > 0 ? MAXIMUM_META_SCORE : 0
+    heading_points = headings_count(client_page_dom) > 0 ? MAXIMUM_HEADING_SCORE : 0
 
     return title_points + meta_points + heading_points
   end
@@ -98,16 +96,16 @@ module SearchHelper
   end
 
   def seo_score_filter(score)
-    return score > seo_minimum_score
+    return score > SEO_MINIMUM_SCORE
   end
 
-  def query_google_api(url)
-    Timeout::timeout(google_api_time_limit) {HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}")}
+  def timeout_query_google_api(url)
+    Timeout::timeout(GOOGLE_API_TIME_LIMIT) {HTTParty.get("https://www.googleapis.com/pagespeedonline/v2/runPagespeed?url=#{url}&strategy=mobile&key=#{ENV['SPEED_API_KEY']}")}
   end
 
   def calculate_page_score(google_response, points_from_seo)
-    speed_score = maximum_speed_score * (google_response["ruleGroups"]["SPEED"]["score"]/max_google_score)
-    usability_score = maximum_usability_score *(google_response["ruleGroups"]["USABILITY"]["score"]/max_google_score)
+    speed_score = MAXIMUM_SPEED_SCORE * (google_response["ruleGroups"]["SPEED"]["score"]/MAXIMUM_GOOGLE_SCORE)
+    usability_score = MAXIMUM_USABILITY_SCORE * (google_response["ruleGroups"]["USABILITY"]["score"]/MAXIMUM_GOOGLE_SCORE)
 
     return speed_score + usability_score + points_from_seo
   end
@@ -117,7 +115,7 @@ module SearchHelper
   end
 
   def failed_test(score)
-    return score < minimum_success_benchmark
+    return score < MINIMUM_SUCCESS_BENCHMARK
   end
 
 end

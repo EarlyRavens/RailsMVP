@@ -1135,3 +1135,555 @@ Processing by SearchController#query as HTML
 Completed 200 OK in 8583ms (Views: 23.8ms)
 
 
+Started GET "/query?utf8=%E2%9C%93&business=gyro&location=94105" for 127.0.0.1 at 2017-06-11 21:39:57 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"gyro", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (20.8ms)
+Completed 200 OK in 44116ms (Views: 67.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 21:40:59 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 43634ms (Views: 22.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=gyro&location=94105" for 127.0.0.1 at 2017-06-11 21:41:49 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"gyro", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (32.2ms)
+Completed 200 OK in 7299ms (Views: 57.9ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 22:02:13 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 9359ms (Views: 40.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 22:02:45 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12117ms (Views: 21.9ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=sushi&location=94105" for 127.0.0.1 at 2017-06-11 22:03:01 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"sushi", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 9650ms (Views: 29.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 22:03:33 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 11012ms (Views: 30.8ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 22:04:38 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (3.8ms)
+Completed 200 OK in 8907ms (Views: 21.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:06:29 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (24.0ms)
+Completed 200 OK in 10230ms (Views: 111.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:07:15 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 8491ms (Views: 19.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:07:25 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 8193ms (Views: 48.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:07:34 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 7262ms (Views: 29.9ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:07:57 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 7928ms (Views: 21.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:08:32 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 7888ms (Views: 27.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:09:21 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 7725ms (Views: 70.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:09:44 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7559ms (Views: 20.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:10:03 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 8818ms (Views: 42.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:10:28 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 7502ms (Views: 58.2ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:10:41 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 8315ms (Views: 23.8ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:12:10 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 8817ms (Views: 20.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:12:25 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 8778ms (Views: 21.2ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:16:06 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 10022ms (Views: 249.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:16:28 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (18.0ms)
+Completed 200 OK in 8432ms (Views: 39.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:16:50 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (9.7ms)
+Completed 200 OK in 7763ms (Views: 36.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:18:09 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 9746ms (Views: 67.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:18:30 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 7925ms (Views: 26.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:19:04 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 9009ms (Views: 20.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:20:25 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7824ms (Views: 20.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:20:58 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 6888ms (Views: 39.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:21:20 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 9222ms (Views: 20.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:21:43 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (11.0ms)
+Completed 200 OK in 7448ms (Views: 45.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:21:57 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 8069ms (Views: 24.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:22:26 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.2ms)
+Completed 200 OK in 7992ms (Views: 21.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:23:03 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.7ms)
+Completed 200 OK in 11668ms (Views: 28.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:23:16 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 12005ms (Views: 23.6ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:23:38 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.2ms)
+Completed 200 OK in 8137ms (Views: 148.8ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:24:23 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 6983ms (Views: 42.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:24:55 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (10.3ms)
+Completed 200 OK in 8836ms (Views: 39.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:25:17 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.0ms)
+Completed 200 OK in 6946ms (Views: 40.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:25:59 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.7ms)
+Completed 200 OK in 8755ms (Views: 33.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:27:03 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.6ms)
+Completed 200 OK in 16882ms (Views: 31.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:27:37 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 10843ms (Views: 21.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:27:59 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 17429ms (Views: 26.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:28:32 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 12317ms (Views: 25.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=auto+body+&location=94105" for 127.0.0.1 at 2017-06-11 22:28:53 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"auto body ", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 16780ms (Views: 35.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=tacos&location=94105" for 127.0.0.1 at 2017-06-11 22:29:14 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"tacos", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 18151ms (Views: 33.2ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:29:50 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.7ms)
+Completed 200 OK in 16887ms (Views: 22.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:30:39 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (23.6ms)
+Completed 200 OK in 18900ms (Views: 119.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:31:06 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (20.6ms)
+Completed 200 OK in 7610ms (Views: 63.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:32:55 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 17386ms (Views: 33.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:33:37 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (6.8ms)
+Completed 200 OK in 14148ms (Views: 34.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:34:12 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 17912ms (Views: 93.8ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:34:33 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.4ms)
+Completed 200 OK in 14451ms (Views: 27.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:35:34 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.8ms)
+Completed 200 OK in 17940ms (Views: 26.1ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:36:01 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.8ms)
+Completed 200 OK in 7422ms (Views: 35.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:36:18 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.2ms)
+Completed 200 OK in 19322ms (Views: 22.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:36:54 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 14209ms (Views: 33.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:37:30 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 15847ms (Views: 39.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:38:06 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (7.1ms)
+Completed 200 OK in 18168ms (Views: 40.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:38:33 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (8.1ms)
+Completed 200 OK in 12803ms (Views: 41.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:38:57 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.1ms)
+Completed 200 OK in 19338ms (Views: 21.0ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:39:19 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.5ms)
+Completed 200 OK in 11499ms (Views: 23.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:39:34 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.4ms)
+Completed 200 OK in 15021ms (Views: 23.2ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:40:07 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (4.3ms)
+Completed 200 OK in 16828ms (Views: 19.9ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:41:31 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (23.9ms)
+Completed 200 OK in 18886ms (Views: 152.5ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:43:52 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 18507ms (Views: 23.3ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:46:51 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (8.4ms)
+Completed 200 OK in 18774ms (Views: 37.7ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:47:41 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (5.3ms)
+Completed 200 OK in 16326ms (Views: 46.4ms)
+
+
+Started GET "/query?utf8=%E2%9C%93&business=autobody&location=94105" for 127.0.0.1 at 2017-06-11 22:51:35 -0700
+Processing by SearchController#query as HTML
+  Parameters: {"utf8"=>"✓", "business"=>"autobody", "location"=>"94105"}
+  Rendering search/index.html.erb within layouts/application
+  Rendered search/index.html.erb within layouts/application (18.7ms)
+Completed 200 OK in 16847ms (Views: 40.5ms)
+
+
